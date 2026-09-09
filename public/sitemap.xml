@@ -1,27 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://alexrivera.dev/</loc>
-    <lastmod>2026-09-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://alexrivera.dev/#services</loc>
-    <lastmod>2026-09-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://alexrivera.dev/#projects</loc>
-    <lastmod>2026-09-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://alexrivera.dev/#contact</loc>
-    <lastmod>2026-09-09</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
-  </url>
-</urlset>
+<sitemap>
+  <page name="Home">
+    <section>Header / Navigation</section>
+    <section>Hero</section>
+    <section>Statistics</section>
+  </page>
+  <page name="About">
+    <section>About Developer</section>
+    <section>Experience</section>
+    <section>Skills Overview</section>
+  </page>
+  <page name="Services">
+    <service>Custom Website Development</service>
+    <service>Business Websites</service>
+    <service>E-Commerce Development</service>
+    <service>Landing Pages</service>
+    <service>Web Applications</service>
+    <service>Website Redesign</service>
+    <service>Responsive Design</service>
+    <service>SEO-Friendly Development</service>
+  </page>
+  <page name="Skills">
+    <skill>HTML5</skill><skill>CSS3</skill><skill>JavaScript</skill>
+    <skill>TypeScript</skill><skill>React</skill><skill>Next.js</skill>
+    <skill>Tailwind CSS</skill><skill>Node.js</skill><skill>Supabase</skill>
+    <skill>Firebase</skill><skill>Git</skill><skill>GitHub</skill>
+  </page>
+  <page name="Projects">
+    <category>All Projects</category>
+    <category>Business Websites</category>
+    <category>Restaurant Websites</category>
+    <category>Automotive Websites</category>
+    <category>Real Estate Websites</category>
+    <category>E-Commerce</category>
+    <category>Portfolio Websites</category>
+    <category>Web Applications</category>
+  </page>
+  <page name="Project Details">
+    <section>Project Preview</section>
+    <section>Project Description</section>
+    <section>Features</section>
+    <section>Technologies Used</section>
+    <section>Live Demo</section>
+    <section>GitHub</section>
+  </page>
+  <page name="Process">
+    <step>Discover</step><step>Plan</step><step>Design</step>
+    <step>Develop</step><step>Launch</step>
+  </page>
+  <page name="Why Choose Me">
+    <feature>Modern Design</feature><feature>Fast Performance</feature>
+    <feature>Responsive</feature><feature>SEO Friendly</feature>
+    <feature>Clean Code</feature><feature>Secure Development</feature>
+    <feature>Client Support</feature>
+  </page>
+  <page name="Testimonials">
+    <section>Client Reviews</section>
+    <section>Ratings</section>
+    <section>Testimonials Slider</section>
+  </page>
+  <page name="Contact">
+    <section>Contact Form</section>
+    <field>Name</field><field>Email</field><field>Phone</field>
+    <field>Project Type</field><field>Budget</field><field>Message</field>
+  </page>
+  <page name="Direct Contact">
+    <option>WhatsApp</option><option>Email</option>
+    <option>Phone</option><option>Social Media</option>
+  </page>
+  <page name="Footer">
+    <section>About</section><section>Quick Links</section>
+    <section>Services</section><section>Social Links</section>
+    <section>Copyright</section>
+  </page>
+</sitemap>

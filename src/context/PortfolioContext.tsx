@@ -24,6 +24,8 @@ interface PortfolioContextType {
   setSelectedProjectModal: (project: Project | null) => void;
   isAdminOpen: boolean;
   setIsAdminOpen: (open: boolean) => void;
+  isSiteMapOpen: boolean;
+  setIsSiteMapOpen: (open: boolean) => void;
   isAdminAuthenticated: boolean;
   setIsAdminAuthenticated: (auth: boolean) => void;
   addInquiry: (inquiry: Omit<Inquiry, 'id' | 'createdAt' | 'status'>) => void;
@@ -116,6 +118,7 @@ export const PortfolioProvider: React.FC<{ children: React.ReactNode }> = ({ chi
   });
 
   const [isAdminOpen, setIsAdminOpen] = useState(false);
+  const [isSiteMapOpen, setIsSiteMapOpen] = useState(false);
   const [selectedServiceForContact, setSelectedServiceForContact] = useState<string | null>(null);
   const [selectedProjectModal, setSelectedProjectModal] = useState<Project | null>(null);
 
@@ -237,6 +240,8 @@ export const PortfolioProvider: React.FC<{ children: React.ReactNode }> = ({ chi
         setSelectedProjectModal,
         isAdminOpen,
         setIsAdminOpen,
+        isSiteMapOpen,
+        setIsSiteMapOpen,
         isAdminAuthenticated,
         setIsAdminAuthenticated,
         addInquiry,

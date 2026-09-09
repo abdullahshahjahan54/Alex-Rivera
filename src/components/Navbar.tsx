@@ -7,7 +7,8 @@ import {
   Code2, 
   ShieldCheck, 
   SlidersHorizontal,
-  Briefcase
+  Briefcase,
+  Map
 } from 'lucide-react';
 import { usePortfolio } from '../context/PortfolioContext';
 
@@ -16,7 +17,7 @@ interface NavbarProps {
 }
 
 export const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
-  const { settings, setIsAdminOpen, inquiries } = usePortfolio();
+  const { settings, setIsAdminOpen, setIsSiteMapOpen, inquiries } = usePortfolio();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
@@ -133,6 +134,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
 
           {/* Right Action Buttons */}
           <div className="hidden sm:flex items-center gap-3">
+            {/* Sitemap Modal Trigger */}
+            <button
+              onClick={() => setIsSiteMapOpen(true)}
+              className="px-3 py-2 rounded-xl text-slate-400 hover:text-white bg-white/[0.03] hover:bg-white/[0.08] border border-white/[0.06] transition-all hover:border-blue-500/30 flex items-center gap-1.5 text-xs font-semibold"
+              title="View Structured Site Map & Architecture"
+              id="open-sitemap-btn"
+            >
+              <Map className="w-3.5 h-3.5 text-blue-400" />
+              <span>Sitemap</span>
+            </button>
+
             {/* Admin Dashboard Trigger */}
             <button
               onClick={() => setIsAdminOpen(true)}
@@ -164,6 +176,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
 
           {/* Mobile Menu & Admin Toggle */}
           <div className="flex sm:hidden items-center gap-2">
+            <button
+              onClick={() => setIsSiteMapOpen(true)}
+              className="p-2.5 rounded-xl text-slate-300 bg-white/[0.05] border border-white/10"
+              aria-label="Open sitemap"
+            >
+              <Map className="w-4 h-4 text-blue-400" />
+            </button>
             <button
               onClick={() => setIsAdminOpen(true)}
               className="p-2.5 rounded-xl text-slate-300 bg-white/[0.05] border border-white/10"
@@ -219,6 +238,16 @@ export const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
                 >
                   <span>Let&apos;s Work Together</span>
                   <ArrowUpRight className="w-4 h-4" />
+                </button>
+                <button
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    setIsSiteMapOpen(true);
+                  }}
+                  className="w-full py-2.5 px-4 rounded-xl bg-white/[0.04] border border-white/[0.08] text-slate-300 text-sm font-medium flex items-center justify-center gap-2"
+                >
+                  <Map className="w-4 h-4 text-blue-400" />
+                  <span>Interactive Site Map (XML / Structure)</span>
                 </button>
                 <button
                   onClick={() => {

@@ -15,6 +15,7 @@ import { Footer } from './components/Footer';
 import { WhatsAppButton } from './components/WhatsAppButton';
 import { ProjectDetailModal } from './components/ProjectDetailModal';
 import { AdminDashboard } from './components/admin/AdminDashboard';
+import { SiteMapModal } from './components/SiteMapModal';
 
 const PortfolioMain: React.FC = () => {
   const { 
@@ -86,6 +87,9 @@ const PortfolioMain: React.FC = () => {
         project={selectedProjectModal} 
         onClose={() => setSelectedProjectModal(null)} 
       />
+
+      {/* Interactive Site Map Modal */}
+      <SiteMapModal />
 
       {/* Admin CMS Panel */}
       <AdminDashboard />
